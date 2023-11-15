@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codificador Atbash</title>
+    <style>
+        body{font-family:'courier new',times new roman;display:flex;align-items:center;justify-content:center;height:100vh;margin:0;flex-direction:column;background-image:url(Back.jpeg);background-size:cover;background-position:center;color:#fff;padding:0;text-shadow:none}h1,p,label{text-align:center;text-shadow:none}textarea{width:40%}button{margin-top:10px;color:#fff}#mensagemCodificada{margin-top:20px;text-shadow:none}
+    </style>
+    <script>
+        function codificarMensagem(){for(var e=document.getElementById("mensagemOriginal").value.toUpperCase(),n={A:"Z",B:"Y",C:"X",D:"W",E:"V",F:"U",G:"T",H:"S",I:"R",J:"Q",K:"P",L:"O",M:"N",N:"M",O:"L",P:"K",Q:"J",R:"I",S:"H",T:"G",U:"F",V:"E",W:"D",X:"C",Y:"B",Z:"A"},a="",t=0;t<e.length;t++){var r=e.charAt(t);n.hasOwnProperty(r)?a+=n[r]:a+=r}document.getElementById("mensagemCodificada").innerHTML=a}
+    </script>
+</head>
+
+<body>
+    <h1>Codificador para Atbash</h1>
+
+    <p>Olá Murphy.</p>
+
+    <label for="mensagemOriginal">O que quer Codificar?</label>
+    <p> </p>
+    <textarea id="mensagemOriginal" rows="6" cols="25"></textarea><br>
+
+    <button onclick="codificarMensagem()">Codificar</button>
+    <p> </p>
+
+    <label>Em Atbash será:</label>
+    <div id="mensagemCodificada"></div>
+
+</body>
+
+</html>
